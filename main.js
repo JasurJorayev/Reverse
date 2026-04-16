@@ -2,7 +2,9 @@ function num(son){
 
     if(son ==0)  return "0 dan katta son kiriting"
     if(son < 9) return son
+    if(son > 9999) return "Xozircha faqat 4 xonali sonlar kiriting"
 
+    // -------------------------------Ikki xonali sonlar------------------------------------
 if(son<99){
     if(son % 10 ==0){
         let birlik = son % 10
@@ -15,6 +17,7 @@ if(son<99){
 
         return (birlik*10)+(Math.trunc(onlik))
     }
+    //--------------------------------- Uch xonali sonlar--------------------------------
 }else if(son<999){
     if(son % 10 == 0){
         let birlik = son % 10
@@ -30,6 +33,7 @@ if(son<99){
 
         return  (birlik*100)  +  (onlik*10)  +  yuzlik
     }
+    //---------------------------------- Tort xonali sonlar-----------------------------
 }else if(son<9999){
     if(son % 10 ==0){
         let birlik = son % 10
@@ -49,5 +53,5 @@ if(son<99){
     }
   }
 }
-let result = num(7)
+let result = num(12347)
 console.log(result);
