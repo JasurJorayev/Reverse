@@ -2,9 +2,10 @@ function num(son){
 
     if(son == 0) { 
         return "0 dan katta son kiriting"
-    }else if( son > -1){
+    }else if( son <= -1){
         return "Musbat son kiriting"
     }
+    if(son <9) return son
 
     if(son > 99999) return "Xozircha faqat 5 xonali sonlar kiriting"
 
@@ -76,5 +77,5 @@ if(son<99){
     return (birlik*10000)  +  (onlik*1000)  +  (yuzlik*100) + (minglik*10) +on_minglik
   }
 }
-let result = num(0)
+let result = num(12345)
 console.log(result);
