@@ -2,7 +2,7 @@ function num(son){
 
     if(son ==0)  return "0 dan katta son kiriting"
     if(son < 9) return son
-    if(son > 9999) return "Xozircha faqat 4 xonali sonlar kiriting"
+    if(son > 99999) return "Xozircha faqat 5 xonali sonlar kiriting"
 
     // -------------------------------Ikki xonali sonlar------------------------------------
 if(son<99){
@@ -41,7 +41,8 @@ if(son<99){
         let yuzlik = Math.trunc(son / 100 % 10)
         let minglik = Math.trunc(son / 1000 % 100)
 
-        let natija = (birlik.toString()  +   (Math.trunc(onlik.toString()) ) +  yuzlik.toString() + minglik.toString())
+        let natija = (birlik.toString() + (onlik.toString())  +  yuzlik.toString() + minglik.toString())
+
         return natija
     }else{
         let birlik = son % 10
@@ -51,7 +52,25 @@ if(son<99){
 
         return (birlik*1000)  +  (onlik*100)  +  (yuzlik*10) + minglik
     }
+    //------------------------------Besh xonali son--------------------------------------
+  }else if(son < 99999){
+    let birlik = son % 10
+    let onlik = Math.floor((son / 10) % 10)
+    let yuzlik = Math.floor((son / 100) % 10)
+    let minglik = Math.floor((son / 1000) % 10)
+    let on_minglik = Math.floor(son / 10000)
+
+     let natija = (birlik).toString() + (onlik ).toString() + (yuzlik ).toString() + (minglik ).toString() + on_minglik.toString();
+
+     return natija
+  }else{
+    let onlik = Math.floor((son / 10) % 10)
+    let yuzlik = Math.floor((son / 100) % 10)
+    let minglik = Math.floor((son / 1000) % 10)
+    let on_minglik = Math.floor(son / 10000)
+
+    return (birlik*10000)  +  (onlik*1000)  +  (yuzlik*100) + (minglik*10) +on_minglik
   }
 }
-let result = num(1565)
+let result = num(12333)
 console.log(result);
