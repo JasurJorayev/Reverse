@@ -53,5 +53,5 @@ if(son<99){
     }
   }
 }
-let result = num(12347)
+let result = num(1565)
 console.log(result);
